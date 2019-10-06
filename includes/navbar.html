@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#target">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="target">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="" class="nav-link" data-toggle="modal" data-target="#Modal">
+                    <svg class="mr-1" id="i-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 35" width="25" height="25" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
+                    </svg>
+                    Choose quiz mode
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Warninig</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Returning to settings screen will cause session to restart.
+          Are you sure you want to continue?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <a href="../" class="btn btn-primary">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
