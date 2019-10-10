@@ -21,8 +21,12 @@
 
     $quote = $_SESSION['question_set'][$_SESSION['question_number']];
 
-    $author = new Author($db);
-    $wrong_authors = $author->multiple_IncorrectAnswers($quote['author_id']);
+    if(!isset($quote['wrong_authors'])){
+        $author = new Author($db);
+        $_SESSION['question_set'][$_SESSION['question_number']]['wrong_authors'] = $author->multiple_IncorrectAnswers($quote['author_id']);
+    }
+
+    $wrong_authors = $_SESSION['question_set'][$_SESSION['question_number']]['wrong_authors'];
 
     $variants[0] = ['id' => $quote['author_id'], 'name' => $quote['author_name']];
     $variants[1] = ['id' => $wrong_authors[0]['id'], 'name' => $wrong_authors[0]['name']];
